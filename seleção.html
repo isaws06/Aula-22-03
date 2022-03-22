@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Produtos</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Verdana;
+      
+        }
+        header{
+            background-color: coral;
+            padding: 20px;
+        }
+        header > h2{
+            color: cornsilk;
+            text-align:center;
+        }
+        .container{
+            border: 1px solid #eb4034;
+            margin: auto;
+            margin-top: 16px;
+            padding: 8px;
+            width: 70%;
+        }
+        footer{
+            background-color:rgb(255, 112, 60);
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Seleção de Produtos</h2>
+    </header>
+    <div class="container">
+        <h4>Lista de Produtos</h4>
+        <p>Selecione um produto
+        <select id="produtos">
+            <option value= "Hamburguer I">Hamburguer I</option> 
+            <option value= "Hamburguer II">Hamburguer II</option> 
+            <option value= "Hamburguer III">Hamburguer III</option>
+            <option value= "Pizza I">Pizza I</option>
+            <option value= "Pizza II">Pizza II</option>
+        </select>
+    </p>
+ </div>
+
+ <script>
+     let select = document.querySelector("#produtos")
+     select.addEventListener("change", setProdutos)
+
+     function setProdutos(){
+        if(select.value == "Hamburguer I"){
+            alert("Valor é R$35,00")
+        } else if(select.value == "Hamburguer II"){
+            alert("Valor é R$45,00")
+        } else if(select.value == "Hamburguer III"){
+            alert("Valor é R$49,00")
+        } else if(select.value == "Pizza I"){
+            alert("Valor é R$50,00")
+        } else if(select.value == "Pizza II"){
+            alert("Valor é R$56,00") 
+        } else {
+            alert("Valor é R$59,00")
+        }
+
+    }
+ </script>
+
+    <footer>
+        <ul>
+            <li>Mercadinho do SENAI/SESI</li>
+            <li>Compre tudo com menor preço</li>
+        </ul>
+    </footer>
+</body>
+</html>
